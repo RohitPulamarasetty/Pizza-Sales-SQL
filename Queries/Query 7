@@ -1,0 +1,8 @@
+-- Determine the distribution of orders by hour of the day.
+
+SELECT 
+    HOUR(order_time) AS Hour_day, COUNT(order_id) AS Quantity
+FROM
+    orders
+GROUP BY Hour_day
+ORDER BY Hour_day;
